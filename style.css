@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #222, #000);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#match {
+    width: 40px;
+    height: 10px;
+    background-color: orange;
+    position: absolute;
+    left: -50px; /* start off-screen */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#bomb {
+    width: 500px;
+    height: 500px;
+    background-image: url("boomb.png");
+    background-size: 500px 500px; /* scale image larger than box */
+    background-position: 10px 15px; /* move image inside the box to crop */
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blast {
+    width: 500px;
+    height: 450px;
+    background-image: url("hi.png");
+    background-size: 500px 500px;  /* make image bigger than box */
+    background-position: -70px 10px; /* shift image to show desired part */
+    background-repeat: no-repeat;
+    position: absolute;
+    display: none;
+    transition-duration: 1s;
+    transition-timing-function: 5s;
+    transform: scale(1.2);
+}
